@@ -131,7 +131,7 @@ export default function VisionLab({ screeningResult, isSequentialScreening, onCo
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 20000);
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/iris-tracking`, {
+      const res = await fetch(`${API_BASE_URL}/api/iris-tracking`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         signal: controller.signal,
@@ -163,7 +163,7 @@ export default function VisionLab({ screeningResult, isSequentialScreening, onCo
       const isTimeout = err.name === "AbortError";
       const msg = isTimeout 
         ? "Analysis timed out after 20 seconds. Please click Re-scan Biometrics to try again."
-        : `Backend connection failed: ${err.message}. Ensure backend is running at .`;
+        : `Backend connection failed: ${err.message}. Ensure backend is reachable at ${API_BASE_URL}.`;
       setApiError(msg);
       setBiometricsResult(null);
     } finally {
