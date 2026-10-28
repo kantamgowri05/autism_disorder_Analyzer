@@ -432,7 +432,7 @@ async def analyze_iris(request: Request, req: Optional[IrisTrackingRequest] = No
             # Fallback if explicit is_child_or_toddler flag set without contradictory age_group
             is_child = False  # default Unknown does NOT trigger pediatric gate
             
-        try:
+    try:
         return analyze_image_iris_scale(img, is_child_or_toddler=is_child)
     except Exception as err:
         from iris_scale import generate_cloud_morphometrics_fallback
