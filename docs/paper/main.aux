@@ -1,0 +1,85 @@
+\relax 
+\citation{american2013diagnostic}
+\citation{thabtah2019machine}
+\citation{allison2012toward}
+\citation{geirhos2020shortcut}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
+\citation{american2013diagnostic}
+\citation{allison2012toward}
+\citation{thabtah2017autism}
+\citation{thabtah2018qchat}
+\citation{uci_asd_adult,uci_asd_child,uci_asd_adolescent}
+\citation{kaggle_toddler}
+\citation{thabtah2019machine}
+\citation{kapoor2023leakage}
+\citation{geirhos2020shortcut}
+\citation{sandler2018mobilenetv2}
+\citation{selvaraju2017grad}
+\citation{vovk2005algorithmic}
+\citation{angelopoulos2021gentle}
+\citation{kaggle_toddler}
+\citation{uci_asd_child,uci_asd_adolescent,uci_asd_adult}
+\citation{thabtah2017autism}
+\citation{thabtah2018qchat}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Dataset Provenance and Leakage Audit}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Cohort Repositories and Arithmetic Rule Verification}{2}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Leakage Audit: Agreement of Deterministic Threshold Scoring Rule across Raw and Deduplicated Cohorts}}{2}{}\protected@file@percent }
+\newlabel{tab:leakage_audit}{{I}{2}{}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Record Deduplication and the 6,075-Instance Multi-Age Dataset}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Baseline and Demographic Confound Audit}{2}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces System architecture of the proposed framework: data layer (public questionnaire cohorts and an exploratory face-image set that is excluded from screening decisions), analysis engine (leakage audit, nested item selection, adaptive Bayesian screener, and split conformal calibration) and application layer (FastAPI service, web client, respondent and specialist referral).}}{3}{}\protected@file@percent }
+\newlabel{fig:architecture}{{1}{3}{}{figure.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Demographic-Only Baseline: Trivial Majority Class vs. Demographic Random Forest ($5 \times 5$ CV)}}{3}{}\protected@file@percent }
+\newlabel{tab:demographics_baseline}{{II}{3}{}{table.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Honest Questionnaire Shortening}{3}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Lines: fixed-$k$; stars: adaptive stopping. Accuracy as a function of mean items asked for all cohorts.}}{3}{}\protected@file@percent }
+\newlabel{fig:shortening_adaptive}{{2}{3}{}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Adaptive Information-Gain Stopping}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Formulation and Stopping Bounds}{3}{}\protected@file@percent }
+\citation{vovk2005algorithmic,angelopoulos2021gentle}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Questionnaire Shortening at $k \in \{3, 5, 7\}$ Items: Random Forest vs. Logistic Regression vs. Exact Bayes vs. Joint Pairwise ($5\times 5$ Stratified CV)}}{4}{}\protected@file@percent }
+\newlabel{tab:shortening}{{III}{4}{}{table.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Adaptive Bayesian Information-Gain Stopping ($\delta =0.05$, Target $95\%$ Certainty)}}{4}{}\protected@file@percent }
+\newlabel{tab:adaptive_screener}{{IV}{4}{}{table.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Empirical Stopping Results}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Conformal Abstention Under Clinical Risk}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The coverage vs. abstention trade-off at different error levels $\alpha \in \{0.05, 0.10, 0.20\}$ using held-out calibration.}}{4}{}\protected@file@percent }
+\newlabel{fig:conformal_tradeoff}{{3}{4}{}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Split Conformal Calibration}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Empirical Coverage and Abstention Dynamics}{4}{}\protected@file@percent }
+\citation{senol2020autism}
+\citation{sandler2018mobilenetv2}
+\citation{selvaraju2017grad}
+\citation{geirhos2020shortcut}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Split Conformal Abstention under Clinical Risk with 100 Repeated $60/20/20$ Splits ($\alpha \in \{0.05, 0.10, 0.20\}$)}}{5}{}\protected@file@percent }
+\newlabel{tab:conformal_abstention}{{V}{5}{}{table.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Audit of paediatric face benchmark: (a) Visual attribution mass (via Grad-CAM) focused on the border areas of the image relative to a baseline physical area; (b) Per-class systematic quality gate pass rate differential ($p = 5.44 \times 10^{-19}$).}}{5}{}\protected@file@percent }
+\newlabel{fig:face_audit_fig}{{4}{5}{}{figure.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Negative Audit: Open Facial Image Benchmark}{5}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Negative Audit for Open Pediatric Face Benchmark (Autism Image Data, $N = 3{,}014$)}}{5}{}\protected@file@percent }
+\newlabel{tab:face_audit}{{VI}{5}{}{table.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-A}}Acquisition Disparities and Quality Gate Auditing}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-B}}Grad-CAM Visual Attribution and Shortcut Verification}{5}{}\protected@file@percent }
+\bibcite{american2013diagnostic}{1}
+\bibcite{allison2012toward}{2}
+\bibcite{thabtah2017autism}{3}
+\bibcite{thabtah2018qchat}{4}
+\bibcite{thabtah2019machine}{5}
+\bibcite{senol2020autism}{6}
+\bibcite{kapoor2023leakage}{7}
+\bibcite{geirhos2020shortcut}{8}
+\bibcite{sandler2018mobilenetv2}{9}
+\bibcite{selvaraju2017grad}{10}
+\bibcite{vovk2005algorithmic}{11}
+\bibcite{angelopoulos2021gentle}{12}
+\bibcite{uci_asd_adult}{13}
+\bibcite{uci_asd_child}{14}
+\bibcite{uci_asd_adolescent}{15}
+\bibcite{kaggle_toddler}{16}
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Discussion, Limitations, and Conclusion}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-A}}Discussion}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-B}}Limitations}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-C}}Conclusion}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{6}{}\protected@file@percent }
+\gdef \@abspage@last{6}

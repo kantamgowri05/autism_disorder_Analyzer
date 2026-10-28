@@ -1,0 +1,247 @@
+{
+  "section": "Negative Result & Methodological Audit of Open Pediatric Face Benchmark",
+  "dataset_provenance": "Kaggle Autism Image Dataset (web-scraped pediatric photographs without confirmed clinical ground truth)",
+  "split_image_counts": {
+    "train": 2654,
+    "valid": 80,
+    "test": 280
+  },
+  "cryptographic_md5_duplicates": {
+    "train_internal": 3,
+    "train_vs_valid": 0,
+    "train_vs_test": 0,
+    "valid_internal": 0,
+    "valid_vs_test": 56,
+    "test_internal": 0
+  },
+  "perceptual_hash_near_duplicates_distance_le_4": {
+    "train_internal_near_dups": 11,
+    "train_vs_valid_near_dups": 0,
+    "train_vs_test_near_dups": 0,
+    "valid_internal_near_dups": 0,
+    "valid_vs_test_near_dups": 56,
+    "test_internal_near_dups": 0
+  },
+  "shortcut_learning_audit": {
+    "mean_border_luminance_autistic": 113.91,
+    "mean_border_luminance_non_autistic": 121.63,
+    "luminance_discrepancy": 7.72,
+    "finding": "Statistically detectable divergence in background lighting and image compression between classes indicates risk of shortcut learning, wherein deep CNNs attend to studio/home lighting cues rather than facial morphology."
+  },
+  "clean_split_mobilenet_evaluation": {
+    "clean_test_size": 224,
+    "removed_leakage_images_count": 56,
+    "clean_test_accuracy": 0.4955,
+    "clean_test_roc_auc": 0.4595
+  },
+  "scientific_conclusion": "Facial computer vision on open web-scraped pediatric datasets demonstrates substantial data hygiene and confounding limitations. We retain computer vision strictly as an exploratory software demo, not a diagnostic instrument.",
+  "gradcam_shortcut_analysis": {
+    "target_layer": "mobilenetv2_1.00_160.out_relu",
+    "sample_images_evaluated": 30,
+    "mean_background_border_saliency_share": 0.5173,
+    "mean_central_facial_saliency_share": 0.4827,
+    "shortcut_learning_confirmed": true,
+    "interpretation": "Grad-CAM feature attributions show 51.73% of saliency energy concentrated in peripheral border edges (which comprise only 36.00% of total image pixels), demonstrating an over-concentration ratio of 1.44x driven by background illumination and compression artifacts rather than facial landmarks.",
+    "border_pixel_area_share_baseline": 0.36,
+    "saliency_to_area_concentration_ratio": 1.4369
+  },
+  "face_quality_by_class": {
+    "total_images_evaluated": 3014,
+    "cohorts": {
+      "autistic": {
+        "n_images": 1507,
+        "no_face_count": 0,
+        "no_face_rate_pct": 0.0,
+        "gate_pass_count": 246,
+        "gate_pass_rate_pct": 16.32,
+        "flags_frequency": {
+          "iris_too_small": {
+            "count": 919,
+            "percentage": 60.98
+          },
+          "image_blur_high": {
+            "count": 396,
+            "percentage": 26.28
+          },
+          "iris_diameter_asymmetry_high": {
+            "count": 368,
+            "percentage": 24.42
+          },
+          "head_yaw_exceeds_15_deg": {
+            "count": 265,
+            "percentage": 17.58
+          },
+          "measurement_implausible": {
+            "count": 7,
+            "percentage": 0.46
+          }
+        },
+        "metrics": {
+          "image_width": {
+            "median": 278.0,
+            "q25": 212.0,
+            "q75": 379.0,
+            "iqr": 167.0,
+            "mean": 331.02,
+            "std": 205.37
+          },
+          "image_height": {
+            "median": 323.0,
+            "q25": 246.0,
+            "q75": 435.0,
+            "iqr": 189.0,
+            "mean": 382.75,
+            "std": 229.24
+          },
+          "mean_iris_px": {
+            "median": 18.82,
+            "q25": 13.92,
+            "q75": 27.19,
+            "iqr": 13.27,
+            "mean": 23.09,
+            "std": 15.3
+          },
+          "abs_yaw_deg": {
+            "median": 6.1,
+            "q25": 2.6,
+            "q75": 11.8,
+            "iqr": 9.2,
+            "mean": 8.33,
+            "std": 7.5
+          },
+          "blur_score": {
+            "median": 232.48,
+            "q25": 93.95,
+            "q75": 541.84,
+            "iqr": 447.89,
+            "mean": 450.32,
+            "std": 643.1
+          }
+        }
+      },
+      "non_autistic": {
+        "n_images": 1507,
+        "no_face_count": 0,
+        "no_face_rate_pct": 0.0,
+        "gate_pass_count": 452,
+        "gate_pass_rate_pct": 29.99,
+        "flags_frequency": {
+          "iris_too_small": {
+            "count": 682,
+            "percentage": 45.26
+          },
+          "image_blur_high": {
+            "count": 310,
+            "percentage": 20.57
+          },
+          "iris_diameter_asymmetry_high": {
+            "count": 253,
+            "percentage": 16.79
+          },
+          "head_yaw_exceeds_15_deg": {
+            "count": 206,
+            "percentage": 13.67
+          }
+        },
+        "metrics": {
+          "image_width": {
+            "median": 302.0,
+            "q25": 230.0,
+            "q75": 409.5,
+            "iqr": 179.5,
+            "mean": 357.67,
+            "std": 212.73
+          },
+          "image_height": {
+            "median": 342.0,
+            "q25": 256.5,
+            "q75": 459.5,
+            "iqr": 203.0,
+            "mean": 397.38,
+            "std": 234.86
+          },
+          "mean_iris_px": {
+            "median": 23.13,
+            "q25": 17.3,
+            "q75": 31.67,
+            "iqr": 14.38,
+            "mean": 27.23,
+            "std": 16.97
+          },
+          "abs_yaw_deg": {
+            "median": 4.8,
+            "q25": 2.1,
+            "q75": 9.8,
+            "iqr": 7.7,
+            "mean": 7.07,
+            "std": 6.78
+          },
+          "blur_score": {
+            "median": 296.44,
+            "q25": 122.41,
+            "q75": 654.79,
+            "iqr": 532.38,
+            "mean": 563.07,
+            "std": 934.0
+          }
+        }
+      }
+    },
+    "statistical_comparisons": {
+      "gate_pass_rate_fisher_exact": {
+        "odds_ratio": 0.4553,
+        "p_value": 5.439097043210452e-19,
+        "chi2_stat": 78.3532,
+        "chi2_p_value": 8.61676509729578e-19
+      },
+      "no_face_rate_fisher_exact": {
+        "odds_ratio": null,
+        "p_value": 1.0,
+        "chi2_stat": null,
+        "chi2_p_value": null
+      },
+      "mann_whitney_u_continuous": {
+        "image_width": {
+          "mann_whitney_u": 1020731.5,
+          "p_value": 1.54271710745528e-06,
+          "rank_biserial_r": 0.1011,
+          "cohens_d": -0.1274,
+          "n_autistic": 1507,
+          "n_non_autistic": 1507
+        },
+        "image_height": {
+          "mann_whitney_u": 1074273.0,
+          "p_value": 0.010341940448843555,
+          "rank_biserial_r": 0.0539,
+          "cohens_d": -0.0631,
+          "n_autistic": 1507,
+          "n_non_autistic": 1507
+        },
+        "mean_iris_px": {
+          "mann_whitney_u": 887989.0,
+          "p_value": 8.375479510031094e-25,
+          "rank_biserial_r": 0.2164,
+          "cohens_d": -0.2563,
+          "n_autistic": 1504,
+          "n_non_autistic": 1507
+        },
+        "abs_yaw_deg": {
+          "mann_whitney_u": 1249227.5,
+          "p_value": 1.1620778339823736e-06,
+          "rank_biserial_r": -0.1023,
+          "cohens_d": 0.1766,
+          "n_autistic": 1504,
+          "n_non_autistic": 1507
+        },
+        "blur_score": {
+          "mann_whitney_u": 1024556.0,
+          "p_value": 3.392711851177548e-06,
+          "rank_biserial_r": 0.0977,
+          "cohens_d": -0.1406,
+          "n_autistic": 1507,
+          "n_non_autistic": 1507
+        }
+      }
+    }
+  }
+}

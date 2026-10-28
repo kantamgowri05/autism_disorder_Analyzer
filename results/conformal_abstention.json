@@ -1,0 +1,167 @@
+{
+  "method": "Split Conformal Prediction with Held-out Calibration (Exchangeability Guaranteed)",
+  "calibration_split_note": "Calibration split is strictly held out from both model training and test. Base model is fitted on 60% train, calibrated on 20% cal, and evaluated on 20% test.",
+  "alphas_evaluated": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "cohort_results": {
+    "adult": {
+      "n_train": 422,
+      "n_cal": 141,
+      "n_test": 141,
+      "ece": 0.0779,
+      "brier_score": 0.0525,
+      "conformal_sweep": [
+        {
+          "alpha": 0.05,
+          "target_coverage": "95%",
+          "empirical_coverage": 0.9433,
+          "conformal_quantile_threshold": 0.5173,
+          "abstention_rate": 0.0142,
+          "selective_accuracy": 0.9424,
+          "retained_cases_count": 139,
+          "abstained_cases_count": 2
+        },
+        {
+          "alpha": 0.1,
+          "target_coverage": "90%",
+          "empirical_coverage": 0.9007,
+          "conformal_quantile_threshold": 0.436,
+          "abstention_rate": 0.0709,
+          "selective_accuracy": 0.9695,
+          "retained_cases_count": 131,
+          "abstained_cases_count": 10
+        },
+        {
+          "alpha": 0.2,
+          "target_coverage": "80%",
+          "empirical_coverage": 0.6738,
+          "conformal_quantile_threshold": 0.164,
+          "abstention_rate": 0.3262,
+          "selective_accuracy": 1.0,
+          "retained_cases_count": 95,
+          "abstained_cases_count": 46
+        }
+      ]
+    },
+    "child": {
+      "n_train": 175,
+      "n_cal": 58,
+      "n_test": 59,
+      "ece": 0.1402,
+      "brier_score": 0.0855,
+      "conformal_sweep": [
+        {
+          "alpha": 0.05,
+          "target_coverage": "95%",
+          "empirical_coverage": 0.9661,
+          "conformal_quantile_threshold": 0.5955,
+          "abstention_rate": 0.2034,
+          "selective_accuracy": 0.9574,
+          "retained_cases_count": 47,
+          "abstained_cases_count": 12
+        },
+        {
+          "alpha": 0.1,
+          "target_coverage": "90%",
+          "empirical_coverage": 0.8475,
+          "conformal_quantile_threshold": 0.4706,
+          "abstention_rate": 0.0508,
+          "selective_accuracy": 0.8929,
+          "retained_cases_count": 56,
+          "abstained_cases_count": 3
+        },
+        {
+          "alpha": 0.2,
+          "target_coverage": "80%",
+          "empirical_coverage": 0.7119,
+          "conformal_quantile_threshold": 0.3437,
+          "abstention_rate": 0.2712,
+          "selective_accuracy": 0.9767,
+          "retained_cases_count": 43,
+          "abstained_cases_count": 16
+        }
+      ]
+    },
+    "adolescent": {
+      "n_train": 62,
+      "n_cal": 21,
+      "n_test": 21,
+      "ece": 0.1912,
+      "brier_score": 0.0656,
+      "conformal_sweep": [
+        {
+          "alpha": 0.05,
+          "target_coverage": "95%",
+          "empirical_coverage": 1.0,
+          "conformal_quantile_threshold": 0.4711,
+          "abstention_rate": 0.0,
+          "selective_accuracy": 1.0,
+          "retained_cases_count": 21,
+          "abstained_cases_count": 0
+        },
+        {
+          "alpha": 0.1,
+          "target_coverage": "90%",
+          "empirical_coverage": 1.0,
+          "conformal_quantile_threshold": 0.4711,
+          "abstention_rate": 0.0,
+          "selective_accuracy": 1.0,
+          "retained_cases_count": 21,
+          "abstained_cases_count": 0
+        },
+        {
+          "alpha": 0.2,
+          "target_coverage": "80%",
+          "empirical_coverage": 0.8571,
+          "conformal_quantile_threshold": 0.4267,
+          "abstention_rate": 0.1429,
+          "selective_accuracy": 1.0,
+          "retained_cases_count": 18,
+          "abstained_cases_count": 3
+        }
+      ]
+    },
+    "toddler": {
+      "n_train": 632,
+      "n_cal": 211,
+      "n_test": 211,
+      "ece": 0.0823,
+      "brier_score": 0.031,
+      "conformal_sweep": [
+        {
+          "alpha": 0.05,
+          "target_coverage": "95%",
+          "empirical_coverage": 0.9858,
+          "conformal_quantile_threshold": 0.503,
+          "abstention_rate": 0.0047,
+          "selective_accuracy": 0.9857,
+          "retained_cases_count": 210,
+          "abstained_cases_count": 1
+        },
+        {
+          "alpha": 0.1,
+          "target_coverage": "90%",
+          "empirical_coverage": 0.9573,
+          "conformal_quantile_threshold": 0.4221,
+          "abstention_rate": 0.0332,
+          "selective_accuracy": 0.9902,
+          "retained_cases_count": 204,
+          "abstained_cases_count": 7
+        },
+        {
+          "alpha": 0.2,
+          "target_coverage": "80%",
+          "empirical_coverage": 0.8246,
+          "conformal_quantile_threshold": 0.2431,
+          "abstention_rate": 0.1754,
+          "selective_accuracy": 1.0,
+          "retained_cases_count": 174,
+          "abstained_cases_count": 37
+        }
+      ]
+    }
+  }
+}

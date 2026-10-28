@@ -1,0 +1,179 @@
+{
+  "description": "Split conformal prediction with 100 seeded repeated 60/20/20 splits",
+  "n_splits": 100,
+  "alphas": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "cohort_results": {
+    "adult": {
+      "n_samples": 704,
+      "n_test_per_split": 140,
+      "conformal_summary": [
+        {
+          "alpha": 0.05,
+          "nominal_target": "95%",
+          "coverage_mean": 95.74,
+          "coverage_sd": 2.78,
+          "abstention_mean": 17.94,
+          "abstention_sd": 8.61,
+          "selective_acc_mean": 95.01,
+          "selective_acc_sd": 2.92,
+          "empty_rate_mean": 0.01,
+          "both_rate_mean": 17.93
+        },
+        {
+          "alpha": 0.1,
+          "nominal_target": "90%",
+          "coverage_mean": 90.61,
+          "coverage_sd": 3.39,
+          "abstention_mean": 4.0,
+          "abstention_sd": 3.36,
+          "selective_acc_mean": 91.67,
+          "selective_acc_sd": 2.37,
+          "empty_rate_mean": 1.36,
+          "both_rate_mean": 2.64
+        },
+        {
+          "alpha": 0.2,
+          "nominal_target": "80%",
+          "coverage_mean": 81.86,
+          "coverage_sd": 4.34,
+          "abstention_mean": 13.16,
+          "abstention_sd": 4.91,
+          "selective_acc_mean": 94.31,
+          "selective_acc_sd": 2.21,
+          "empty_rate_mean": 13.16,
+          "both_rate_mean": 0.0
+        }
+      ]
+    },
+    "child": {
+      "n_samples": 292,
+      "n_test_per_split": 58,
+      "conformal_summary": [
+        {
+          "alpha": 0.05,
+          "nominal_target": "95%",
+          "coverage_mean": 96.68,
+          "coverage_sd": 3.46,
+          "abstention_mean": 37.61,
+          "abstention_sd": 22.46,
+          "selective_acc_mean": 95.42,
+          "selective_acc_sd": 4.21,
+          "empty_rate_mean": 0.0,
+          "both_rate_mean": 37.61
+        },
+        {
+          "alpha": 0.1,
+          "nominal_target": "90%",
+          "coverage_mean": 91.85,
+          "coverage_sd": 5.17,
+          "abstention_mean": 14.2,
+          "abstention_sd": 8.56,
+          "selective_acc_mean": 91.0,
+          "selective_acc_sd": 5.2,
+          "empty_rate_mean": 0.19,
+          "both_rate_mean": 14.02
+        },
+        {
+          "alpha": 0.2,
+          "nominal_target": "80%",
+          "coverage_mean": 80.78,
+          "coverage_sd": 7.13,
+          "abstention_mean": 9.97,
+          "abstention_sd": 8.88,
+          "selective_acc_mean": 89.25,
+          "selective_acc_sd": 4.72,
+          "empty_rate_mean": 9.29,
+          "both_rate_mean": 0.68
+        }
+      ]
+    },
+    "adolescent": {
+      "n_samples": 104,
+      "n_test_per_split": 20,
+      "conformal_summary": [
+        {
+          "alpha": 0.05,
+          "nominal_target": "95%",
+          "coverage_mean": 95.62,
+          "coverage_sd": 5.86,
+          "abstention_mean": 55.29,
+          "abstention_sd": 28.85,
+          "selective_acc_mean": 93.26,
+          "selective_acc_sd": 8.36,
+          "empty_rate_mean": 0.0,
+          "both_rate_mean": 55.29
+        },
+        {
+          "alpha": 0.1,
+          "nominal_target": "90%",
+          "coverage_mean": 91.33,
+          "coverage_sd": 7.26,
+          "abstention_mean": 28.14,
+          "abstention_sd": 23.69,
+          "selective_acc_mean": 89.75,
+          "selective_acc_sd": 7.49,
+          "empty_rate_mean": 0.48,
+          "both_rate_mean": 27.67
+        },
+        {
+          "alpha": 0.2,
+          "nominal_target": "80%",
+          "coverage_mean": 82.62,
+          "coverage_sd": 10.2,
+          "abstention_mean": 11.48,
+          "abstention_sd": 9.83,
+          "selective_acc_mean": 87.18,
+          "selective_acc_sd": 7.24,
+          "empty_rate_mean": 5.81,
+          "both_rate_mean": 5.67
+        }
+      ]
+    },
+    "toddler": {
+      "n_samples": 1054,
+      "n_test_per_split": 210,
+      "conformal_summary": [
+        {
+          "alpha": 0.05,
+          "nominal_target": "95%",
+          "coverage_mean": 95.35,
+          "coverage_sd": 1.96,
+          "abstention_mean": 14.94,
+          "abstention_sd": 5.79,
+          "selective_acc_mean": 94.6,
+          "selective_acc_sd": 2.03,
+          "empty_rate_mean": 0.0,
+          "both_rate_mean": 14.94
+        },
+        {
+          "alpha": 0.1,
+          "nominal_target": "90%",
+          "coverage_mean": 90.91,
+          "coverage_sd": 2.71,
+          "abstention_mean": 2.91,
+          "abstention_sd": 2.38,
+          "selective_acc_mean": 92.02,
+          "selective_acc_sd": 1.92,
+          "empty_rate_mean": 1.32,
+          "both_rate_mean": 1.6
+        },
+        {
+          "alpha": 0.2,
+          "nominal_target": "80%",
+          "coverage_mean": 81.46,
+          "coverage_sd": 3.8,
+          "abstention_mean": 13.75,
+          "abstention_sd": 3.88,
+          "selective_acc_mean": 94.46,
+          "selective_acc_sd": 1.55,
+          "empty_rate_mean": 13.75,
+          "both_rate_mean": 0.0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,171 @@
+\begin{table}[t]
+\centering
+\caption{Leakage Audit: Deterministic Threshold Scoring Rule Agreement across Raw and Deduplicated Cohorts}
+\label{tab:leakage_audit}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\linewidth}{|@{\extracolsep{\fill}}l|c|c|c|c|c|}
+\hline
+\textbf{Cohort} & $N_{\text{raw}}$ & $N_{\text{ded}}$ & $t^*$ & \textbf{Agreement} & \textbf{Target Rule} \\
+\hline
+Toddler (Q-CHAT-10) & 1054 & 1054 & 4 & 100.00\% & $\sum \ge 4$ \\
+\hline
+Child (AQ-10) & 292 & 290 & 7 & 100.00\% & $\sum \ge 7$ \\
+\hline
+Adolescent (AQ-10) & 104 & 103 & 7 & 100.00\% & $\sum \ge 7$ \\
+\hline
+Adult (AQ-10) & 704 & 699 & 7 & 100.00\% & $\sum \ge 7$ \\
+\hline
+Combined Multi-Age & 6075 & 5228 & 7 & 93.38\% & $\sum \ge 7$ (Mixed) \\
+\hline
+\end{tabular*}
+\vspace{-2mm}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Demographics-Only Baseline: Trivial Majority Class vs. Demographic Random Forest ($5 \times 5$ CV)}
+\label{tab:demographics_baseline}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\linewidth}{|@{\extracolsep{\fill}}l|c|c|c|c|}
+\hline
+\textbf{Cohort} & \textbf{Majority Acc} & \textbf{RF Acc} & \textbf{RF Bal Acc} & \textbf{RF AUC} \\
+\hline
+Toddler & 69.07\% & 70.61\% & 54.70\% & 0.6540 \\
+\hline
+Child & 51.71\% & 55.01\% & 54.75\% & 0.5557 \\
+\hline
+Adolescent & 60.58\% & 66.18\% & 61.45\% & 0.6545 \\
+\hline
+Adult & 73.15\% & 72.67\% & 50.37\% & 0.7249 \\
+\hline
+\end{tabular*}
+\vspace{-2mm}
+\end{table}
+
+\begin{table*}[t]
+\centering
+\caption{Questionnaire Shortening at $k \in \{3, 5, 7\}$ Items: Random Forest vs. Logistic Regression vs. Exact Bayes vs. Joint Pairwise ($5\times 5$ Stratified CV)}
+\label{tab:shortening}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{|@{\extracolsep{\fill}}l|c|c|c|c|c|c|}
+\hline
+\textbf{Cohort} & $k$ & \textbf{RF Acc [95\% CI]} & \textbf{RF ROC-AUC [CI]} & \textbf{Logistic Reg AUC [CI]} & \textbf{Exact Bayes AUC [CI]} & \textbf{Joint Pairwise AUC [CI]} \\
+\hline
+Toddler & 3 & 85.18 [84.2, 86.1] & 0.9290 [0.9227, 0.9353] & 0.9295 [0.9233, 0.9358] & 0.9300 [0.9241, 0.9359] & 0.9295 [0.9230, 0.9359] \\
+\hline
+Toddler & 5 & 90.30 [89.6, 91.0] & 0.9636 [0.9600, 0.9672] & 0.9639 [0.9603, 0.9675] & 0.9642 [0.9606, 0.9678] & 0.9648 [0.9610, 0.9686] \\
+\hline
+Toddler & 7 & 93.13 [92.6, 93.6] & 0.9825 [0.9802, 0.9848] & 0.9846 [0.9824, 0.9867] & 0.9848 [0.9828, 0.9867] & 0.9779 [0.9750, 0.9807] \\
+\hline
+Child & 3 & 81.92 [79.9, 84.0] & 0.8889 [0.8716, 0.9061] & 0.8897 [0.8740, 0.9054] & 0.8806 [0.8673, 0.8938] & 0.8744 [0.8586, 0.8902] \\
+\hline
+Child & 5 & 84.11 [82.6, 85.7] & 0.9337 [0.9246, 0.9428] & 0.9373 [0.9282, 0.9464] & 0.9302 [0.9215, 0.9388] & 0.9339 [0.9237, 0.9442] \\
+\hline
+Child & 7 & 87.87 [86.6, 89.1] & 0.9627 [0.9565, 0.9690] & 0.9699 [0.9643, 0.9755] & 0.9678 [0.9608, 0.9748] & 0.9436 [0.9335, 0.9536] \\
+\hline
+Adolescent & 3 & 78.90 [74.8, 83.0] & 0.8485 [0.8124, 0.8845] & 0.8504 [0.8164, 0.8845] & 0.8524 [0.8230, 0.8819] & 0.8509 [0.8143, 0.8874] \\
+\hline
+Adolescent & 5 & 85.59 [82.2, 88.9] & 0.9259 [0.9010, 0.9509] & 0.9373 [0.9175, 0.9570] & 0.9260 [0.9065, 0.9456] & 0.9152 [0.8896, 0.9408] \\
+\hline
+Adolescent & 7 & 87.90 [85.0, 90.8] & 0.9607 [0.9478, 0.9737] & 0.9719 [0.9628, 0.9810] & 0.9596 [0.9485, 0.9708] & 0.9300 [0.9061, 0.9540] \\
+\hline
+Adult & 3 & 88.10 [86.8, 89.4] & 0.9409 [0.9317, 0.9500] & 0.9440 [0.9351, 0.9530] & 0.9415 [0.9332, 0.9497] & 0.9426 [0.9337, 0.9514] \\
+\hline
+Adult & 5 & 90.57 [89.5, 91.6] & 0.9655 [0.9596, 0.9714] & 0.9680 [0.9628, 0.9732] & 0.9647 [0.9596, 0.9697] & 0.9618 [0.9556, 0.9680] \\
+\hline
+Adult & 7 & 92.30 [91.4, 93.2] & 0.9768 [0.9723, 0.9812] & 0.9824 [0.9793, 0.9854] & 0.9817 [0.9789, 0.9845] & 0.9691 [0.9656, 0.9726] \\
+\hline
+\end{tabular*}
+\vspace{-2mm}
+\end{table*}
+
+\begin{table}[t]
+\centering
+\caption{Adaptive Bayesian Information-Gain Stopping ($\delta=0.05$, Target $95\%$ Certainty)}
+\label{tab:adaptive_screener}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular*}{\linewidth}{|@{\extracolsep{\fill}}l|c|c|c|c|c|}
+\hline
+\textbf{Cohort} & $N$ & $t^*$ & \textbf{Items} & \textbf{Red. \%} & \textbf{Agr. \%} \\
+\hline
+Adult & 704 & 7 & 4.62 & 53.8\% & 97.87\% \\
+\hline
+Child & 292 & 7 & 6.86 & 31.4\% & 99.66\% \\
+\hline
+Adolescent & 104 & 7 & 6.82 & 31.8\% & 99.04\% \\
+\hline
+Toddler & 1054 & 4 & 4.74 & 52.6\% & 95.07\% \\
+\hline
+\end{tabular*}}
+\vspace{-2mm}
+\end{table}
+
+\begin{table*}[t]
+\centering
+\caption{Split Conformal Abstention under Clinical Risk across 100 Repeated $60/20/20$ Splits ($\alpha \in \{0.05, 0.10, 0.20\}$)}
+\label{tab:conformal_abstention}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{|@{\extracolsep{\fill}}l|c|c|c|c|c|}
+\hline
+\textbf{Cohort} & $\alpha$ & \textbf{Nominal Target} & \textbf{Empirical Coverage (Mean $\pm$ SD)} & \textbf{Abstention Rate (Mean $\pm$ SD)} & \textbf{Selective Accuracy (Mean $\pm$ SD)} \\
+\hline
+Adult & 0.05 & 95\% & 95.74\% $\pm$ 2.78\% & 17.94\% $\pm$ 8.61\% & 95.01\% $\pm$ 2.92\% \\
+\hline
+Adult & 0.10 & 90\% & 90.61\% $\pm$ 3.39\% & 4.00\% $\pm$ 3.36\% & 91.67\% $\pm$ 2.37\% \\
+\hline
+Adult & 0.20 & 80\% & 81.86\% $\pm$ 4.34\% & 13.16\% $\pm$ 4.91\% & 94.31\% $\pm$ 2.21\% \\
+\hline
+Child & 0.05 & 95\% & 96.68\% $\pm$ 3.46\% & 37.61\% $\pm$ 22.46\% & 95.42\% $\pm$ 4.21\% \\
+\hline
+Child & 0.10 & 90\% & 91.85\% $\pm$ 5.17\% & 14.20\% $\pm$ 8.56\% & 91.00\% $\pm$ 5.20\% \\
+\hline
+Child & 0.20 & 80\% & 80.78\% $\pm$ 7.13\% & 9.97\% $\pm$ 8.88\% & 89.25\% $\pm$ 4.72\% \\
+\hline
+Adolescent & 0.05 & 95\% & 95.62\% $\pm$ 5.86\% & 55.29\% $\pm$ 28.85\% & 93.26\% $\pm$ 8.36\% \\
+\hline
+Adolescent & 0.10 & 90\% & 91.33\% $\pm$ 7.26\% & 28.14\% $\pm$ 23.69\% & 89.75\% $\pm$ 7.49\% \\
+\hline
+Adolescent & 0.20 & 80\% & 82.62\% $\pm$ 10.20\% & 11.48\% $\pm$ 9.83\% & 87.18\% $\pm$ 7.24\% \\
+\hline
+Toddler & 0.05 & 95\% & 95.35\% $\pm$ 1.96\% & 14.94\% $\pm$ 5.79\% & 94.60\% $\pm$ 2.03\% \\
+\hline
+Toddler & 0.10 & 90\% & 90.91\% $\pm$ 2.71\% & 2.91\% $\pm$ 2.38\% & 92.02\% $\pm$ 1.92\% \\
+\hline
+Toddler & 0.20 & 80\% & 81.46\% $\pm$ 3.80\% & 13.75\% $\pm$ 3.88\% & 94.46\% $\pm$ 1.55\% \\
+\hline
+\end{tabular*}
+\vspace{-2mm}
+\end{table*}
+
+\begin{table}[t]
+\centering
+\caption{Negative Audit of Open Pediatric Face Benchmark (Kaggle Dataset, $N=3{,}014$)}
+\label{tab:face_audit}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|p{0.55\columnwidth}|p{0.35\columnwidth}|}
+\hline
+\textbf{Audit Dimension / Failure Mode} & \textbf{Empirical Metric} \\
+\hline
+Cross-Split Contamination (Valid vs. Test MD5) & 56 duplicate pairs (split leakage) \\
+\hline
+Perceptual Duplication (Hamming Distance $\le 4$) & 56 near-duplicate pairs \\
+\hline
+Quality Gate Pass Rate Discrepancy & 16.32\% aut. vs. 29.99\% non-aut. ($p < 10^{-18}$) \\
+\hline
+Peripheral Illumination Discrepancy ($\Delta L$) & 7.72 pixel intensity units (0--255) \\
+\hline
+Grad-CAM Saliency in 10\% Outer Border & 51.73\% (physical area baseline: 36.00\%) \\
+\hline
+Retrained MobileNetV2 Accuracy (Clean Split) & 49.55\% (Chance level: 50.00\%, AUC: 0.4595) \\
+\hline
+\end{tabular}}
+\vspace{-2mm}
+\end{table}

@@ -1,0 +1,375 @@
+{
+  "experiment": "Experiment A: Demographics and Medical History Only (Zero Questionnaire Items)",
+  "protocol": "Repeated Stratified 5-Fold Cross Validation (5x5 = 25 evaluations), Fixed Seed 42",
+  "clinical_takeaway": "Demographic variables alone exhibit weak-to-modest signal (ROC-AUC ~0.56 to 0.66) and only marginally exceed the majority-class baseline.",
+  "cohorts": {
+    "toddler_raw": {
+      "cohort": "toddler",
+      "deduplicated": false,
+      "n_samples": 1054,
+      "features_used": [
+        "Age_Mons",
+        "Sex",
+        "Ethnicity",
+        "Jaundice",
+        "Family_mem_with_ASD"
+      ],
+      "majority_class_baseline_accuracy": 0.6907,
+      "majority_class_balanced_accuracy": 0.5,
+      "accuracy": {
+        "mean": 0.7061,
+        "std": 0.0135,
+        "ci_95": [
+          0.7008,
+          0.7114
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.547,
+        "std": 0.021,
+        "ci_95": [
+          0.5388,
+          0.5553
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.654,
+        "std": 0.0359,
+        "ci_95": [
+          0.6399,
+          0.668
+        ]
+      },
+      "f1": {
+        "mean": 0.8192,
+        "std": 0.0082,
+        "ci_95": [
+          0.816,
+          0.8224
+        ]
+      }
+    },
+    "toddler_dedup": {
+      "cohort": "toddler",
+      "deduplicated": true,
+      "n_samples": 498,
+      "features_used": [
+        "Age_Mons",
+        "Sex",
+        "Ethnicity",
+        "Jaundice",
+        "Family_mem_with_ASD"
+      ],
+      "majority_class_baseline_accuracy": 0.6687,
+      "majority_class_balanced_accuracy": 0.5,
+      "accuracy": {
+        "mean": 0.6546,
+        "std": 0.0236,
+        "ci_95": [
+          0.6454,
+          0.6639
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.5042,
+        "std": 0.0244,
+        "ci_95": [
+          0.4946,
+          0.5137
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.5258,
+        "std": 0.0392,
+        "ci_95": [
+          0.5105,
+          0.5412
+        ]
+      },
+      "f1": {
+        "mean": 0.7861,
+        "std": 0.0166,
+        "ci_95": [
+          0.7796,
+          0.7926
+        ]
+      }
+    },
+    "child_raw": {
+      "cohort": "child",
+      "deduplicated": false,
+      "n_samples": 292,
+      "features_used": [
+        "age",
+        "gender",
+        "ethnicity",
+        "jundice",
+        "austim"
+      ],
+      "majority_class_baseline_accuracy": 0.5171,
+      "majority_class_balanced_accuracy": 0.5,
+      "accuracy": {
+        "mean": 0.5501,
+        "std": 0.0695,
+        "ci_95": [
+          0.5229,
+          0.5774
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.5475,
+        "std": 0.0692,
+        "ci_95": [
+          0.5203,
+          0.5746
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.5557,
+        "std": 0.0819,
+        "ci_95": [
+          0.5237,
+          0.5878
+        ]
+      },
+      "f1": {
+        "mean": 0.4953,
+        "std": 0.0826,
+        "ci_95": [
+          0.463,
+          0.5277
+        ]
+      }
+    },
+    "child_dedup": {
+      "cohort": "child",
+      "deduplicated": true,
+      "n_samples": 185,
+      "features_used": [
+        "age",
+        "gender",
+        "ethnicity",
+        "jundice",
+        "austim"
+      ],
+      "majority_class_baseline_accuracy": 0.5189,
+      "majority_class_balanced_accuracy": 0.5,
+      "accuracy": {
+        "mean": 0.4314,
+        "std": 0.0532,
+        "ci_95": [
+          0.4105,
+          0.4522
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.4286,
+        "std": 0.0535,
+        "ci_95": [
+          0.4077,
+          0.4496
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.4096,
+        "std": 0.0686,
+        "ci_95": [
+          0.3827,
+          0.4365
+        ]
+      },
+      "f1": {
+        "mean": 0.3695,
+        "std": 0.0909,
+        "ci_95": [
+          0.3338,
+          0.4051
+        ]
+      }
+    },
+    "adolescent_raw": {
+      "cohort": "adolescent",
+      "deduplicated": false,
+      "n_samples": 104,
+      "features_used": [
+        "age",
+        "gender",
+        "ethnicity",
+        "jundice",
+        "austim"
+      ],
+      "majority_class_baseline_accuracy": 0.6058,
+      "majority_class_balanced_accuracy": 0.5,
+      "accuracy": {
+        "mean": 0.6618,
+        "std": 0.0774,
+        "ci_95": [
+          0.6315,
+          0.6922
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.6145,
+        "std": 0.084,
+        "ci_95": [
+          0.5816,
+          0.6475
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.6545,
+        "std": 0.0833,
+        "ci_95": [
+          0.6218,
+          0.6871
+        ]
+      },
+      "f1": {
+        "mean": 0.7497,
+        "std": 0.06,
+        "ci_95": [
+          0.7262,
+          0.7733
+        ]
+      }
+    },
+    "adolescent_dedup": {
+      "cohort": "adolescent",
+      "deduplicated": true,
+      "n_samples": 76,
+      "features_used": [
+        "age",
+        "gender",
+        "ethnicity",
+        "jundice",
+        "austim"
+      ],
+      "majority_class_baseline_accuracy": 0.5132,
+      "majority_class_balanced_accuracy": 0.5,
+      "accuracy": {
+        "mean": 0.4605,
+        "std": 0.1101,
+        "ci_95": [
+          0.4174,
+          0.5036
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.4611,
+        "std": 0.1087,
+        "ci_95": [
+          0.4185,
+          0.5037
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.4508,
+        "std": 0.139,
+        "ci_95": [
+          0.3964,
+          0.5053
+        ]
+      },
+      "f1": {
+        "mean": 0.4894,
+        "std": 0.1363,
+        "ci_95": [
+          0.4359,
+          0.5428
+        ]
+      }
+    },
+    "adult_raw": {
+      "cohort": "adult",
+      "deduplicated": false,
+      "n_samples": 704,
+      "features_used": [
+        "age",
+        "gender",
+        "ethnicity",
+        "jundice",
+        "austim"
+      ],
+      "majority_class_baseline_accuracy": 0.7315,
+      "majority_class_balanced_accuracy": 0.5,
+      "accuracy": {
+        "mean": 0.7267,
+        "std": 0.0128,
+        "ci_95": [
+          0.7217,
+          0.7317
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.5037,
+        "std": 0.0126,
+        "ci_95": [
+          0.4988,
+          0.5087
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.7249,
+        "std": 0.044,
+        "ci_95": [
+          0.7077,
+          0.7422
+        ]
+      },
+      "f1": {
+        "mean": 0.041,
+        "std": 0.0385,
+        "ci_95": [
+          0.0259,
+          0.0561
+        ]
+      }
+    },
+    "adult_dedup": {
+      "cohort": "adult",
+      "deduplicated": true,
+      "n_samples": 445,
+      "features_used": [
+        "age",
+        "gender",
+        "ethnicity",
+        "jundice",
+        "austim"
+      ],
+      "majority_class_baseline_accuracy": 0.6876,
+      "majority_class_balanced_accuracy": 0.5,
+      "accuracy": {
+        "mean": 0.6764,
+        "std": 0.0222,
+        "ci_95": [
+          0.6677,
+          0.6851
+        ]
+      },
+      "balanced_accuracy": {
+        "mean": 0.4938,
+        "std": 0.0174,
+        "ci_95": [
+          0.487,
+          0.5006
+        ]
+      },
+      "roc_auc": {
+        "mean": 0.5943,
+        "std": 0.0741,
+        "ci_95": [
+          0.5652,
+          0.6233
+        ]
+      },
+      "f1": {
+        "mean": 0.0133,
+        "std": 0.0272,
+        "ci_95": [
+          0.0027,
+          0.024
+        ]
+      }
+    }
+  }
+}

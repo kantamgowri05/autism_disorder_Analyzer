@@ -1,0 +1,36 @@
+﻿# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# Node / Frontend
+node_modules/
+dist/
+.oxlintcache
+
+# Large datasets & raw data
+data/raw/
+data/processed/
+datasets/
+*.db
+*.sqlite
+
+# Large media & archives
+*.mp4
+*.zip
+yolov8n.pt
+
+# Environments & secrets
+.env
+.env.*
+!.env.example
+venv/
+.venv/
+env/
+
+# Editor / IDE artifacts
+.vscode/
+.idea/
+.agents/
+.claude/
+temp_ui_ux_pro_max/

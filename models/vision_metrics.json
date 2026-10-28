@@ -1,0 +1,11 @@
+{
+  "model_name": "MobileNetV2-ASD-Vision",
+  "image_size": [
+    160,
+    160
+  ],
+  "total_images": 3014,
+  "test_accuracy": 0.7964,
+  "test_auc": 0.9024,
+  "model_file": "facial_mobilenet_model.keras"
+}

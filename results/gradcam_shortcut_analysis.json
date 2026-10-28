@@ -1,0 +1,10 @@
+{
+  "target_layer": "mobilenetv2_1.00_160.out_relu",
+  "sample_images_evaluated": 30,
+  "mean_background_border_saliency_share": 0.5173,
+  "mean_central_facial_saliency_share": 0.4827,
+  "shortcut_learning_confirmed": true,
+  "interpretation": "Grad-CAM feature attributions show 51.73% of saliency energy concentrated in peripheral border edges (which comprise only 36.00% of total image pixels), demonstrating an over-concentration ratio of 1.44x driven by background illumination and compression artifacts rather than facial landmarks.",
+  "border_pixel_area_share_baseline": 0.36,
+  "saliency_to_area_concentration_ratio": 1.4369
+}

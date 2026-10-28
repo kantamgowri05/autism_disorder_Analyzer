@@ -1,0 +1,157 @@
+{
+  "toddler": {
+    "total_rows": 1054,
+    "items_found": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10"
+    ],
+    "label_col": "Class/ASD Traits",
+    "best_threshold": 4,
+    "best_agreement": 1.0,
+    "thresholds": {
+      "score>=0": 0.6907,
+      "score>=1": 0.7419,
+      "score>=2": 0.8254,
+      "score>=3": 0.9089,
+      "score>=4": 1.0,
+      "score>=5": 0.8956,
+      "score>=6": 0.7818,
+      "score>=7": 0.6907,
+      "score>=8": 0.5626,
+      "score>=9": 0.4706,
+      "score>=10": 0.3805
+    }
+  },
+  "child": {
+    "total_rows": 292,
+    "items_found": [
+      "A1_Score",
+      "A2_Score",
+      "A3_Score",
+      "A4_Score",
+      "A5_Score",
+      "A6_Score",
+      "A7_Score",
+      "A8_Score",
+      "A9_Score",
+      "A10_Score"
+    ],
+    "label_col": "class",
+    "best_threshold": 7,
+    "best_agreement": 1.0,
+    "thresholds": {
+      "score>=0": 0.4829,
+      "score>=1": 0.4863,
+      "score>=2": 0.5068,
+      "score>=3": 0.5377,
+      "score>=4": 0.6096,
+      "score>=5": 0.7226,
+      "score>=6": 0.863,
+      "score>=7": 1.0,
+      "score>=8": 0.8493,
+      "score>=9": 0.6986,
+      "score>=10": 0.589
+    }
+  },
+  "adolescent": {
+    "total_rows": 104,
+    "items_found": [
+      "A1_Score",
+      "A2_Score",
+      "A3_Score",
+      "A4_Score",
+      "A5_Score",
+      "A6_Score",
+      "A7_Score",
+      "A8_Score",
+      "A9_Score",
+      "A10_Score"
+    ],
+    "label_col": "Class/ASD",
+    "best_threshold": 7,
+    "best_agreement": 1.0,
+    "thresholds": {
+      "score>=0": 0.6058,
+      "score>=1": 0.6058,
+      "score>=2": 0.6346,
+      "score>=3": 0.6538,
+      "score>=4": 0.7019,
+      "score>=5": 0.7981,
+      "score>=6": 0.8462,
+      "score>=7": 1.0,
+      "score>=8": 0.8365,
+      "score>=9": 0.625,
+      "score>=10": 0.4423
+    }
+  },
+  "adult": {
+    "total_rows": 704,
+    "items_found": [
+      "A1_Score",
+      "A2_Score",
+      "A3_Score",
+      "A4_Score",
+      "A5_Score",
+      "A6_Score",
+      "A7_Score",
+      "A8_Score",
+      "A9_Score",
+      "A10_Score"
+    ],
+    "label_col": "class",
+    "best_threshold": 7,
+    "best_agreement": 1.0,
+    "thresholds": {
+      "score>=0": 0.2685,
+      "score>=1": 0.2884,
+      "score>=2": 0.3352,
+      "score>=3": 0.4403,
+      "score>=4": 0.5966,
+      "score>=5": 0.7827,
+      "score>=6": 0.9006,
+      "score>=7": 1.0,
+      "score>=8": 0.919,
+      "score>=9": 0.8409,
+      "score>=10": 0.7741
+    }
+  },
+  "combined": {
+    "total_rows": 6075,
+    "items_found": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "A7",
+      "A8",
+      "A9",
+      "A10"
+    ],
+    "label_col": "Class",
+    "best_threshold": 7,
+    "best_agreement": 0.9338,
+    "thresholds": {
+      "score>=0": 0.297,
+      "score>=1": 0.3212,
+      "score>=2": 0.3758,
+      "score>=3": 0.4593,
+      "score>=4": 0.5722,
+      "score>=5": 0.7067,
+      "score>=6": 0.8229,
+      "score>=7": 0.9338,
+      "score>=8": 0.8578,
+      "score>=9": 0.784,
+      "score>=10": 0.7281
+    }
+  }
+}

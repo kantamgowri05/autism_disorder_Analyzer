@@ -1,0 +1,297 @@
+{
+  "experiment": "Cross-Cohort Validation (Sanity Check Only)",
+  "scientific_clarification": "High cross-cohort transfer is expected because the underlying target labels share one arithmetic sum scoring rule (t=7 across child/adolescent/adult, and t=4 for toddlers). This reflects rule overlap, NOT developmental conservation of the clinical phenotype.",
+  "pairwise_transfer": [
+    {
+      "source_cohort": "adult",
+      "target_cohort": "adolescent",
+      "source_threshold": 7,
+      "target_threshold": 7,
+      "threshold_mismatch": false,
+      "accuracy": 0.9038,
+      "balanced_accuracy": 0.9036,
+      "roc_auc": 0.9686,
+      "notes": "Matching threshold t=7."
+    },
+    {
+      "source_cohort": "adult",
+      "target_cohort": "child",
+      "source_threshold": 7,
+      "target_threshold": 7,
+      "threshold_mismatch": false,
+      "accuracy": 0.9452,
+      "balanced_accuracy": 0.9447,
+      "roc_auc": 0.983,
+      "notes": "Matching threshold t=7."
+    },
+    {
+      "source_cohort": "adult",
+      "target_cohort": "toddler",
+      "source_threshold": 7,
+      "target_threshold": 4,
+      "threshold_mismatch": true,
+      "accuracy": 0.685,
+      "balanced_accuracy": 0.772,
+      "roc_auc": 0.9871,
+      "notes": "Source uses t=7, Target uses t=4."
+    },
+    {
+      "source_cohort": "adolescent",
+      "target_cohort": "adult",
+      "source_threshold": 7,
+      "target_threshold": 7,
+      "threshold_mismatch": false,
+      "accuracy": 0.9233,
+      "balanced_accuracy": 0.9392,
+      "roc_auc": 0.9881,
+      "notes": "Matching threshold t=7."
+    },
+    {
+      "source_cohort": "adolescent",
+      "target_cohort": "child",
+      "source_threshold": 7,
+      "target_threshold": 7,
+      "threshold_mismatch": false,
+      "accuracy": 0.8938,
+      "balanced_accuracy": 0.8971,
+      "roc_auc": 0.9868,
+      "notes": "Matching threshold t=7."
+    },
+    {
+      "source_cohort": "adolescent",
+      "target_cohort": "toddler",
+      "source_threshold": 7,
+      "target_threshold": 4,
+      "threshold_mismatch": true,
+      "accuracy": 0.723,
+      "balanced_accuracy": 0.7995,
+      "roc_auc": 0.9735,
+      "notes": "Source uses t=7, Target uses t=4."
+    },
+    {
+      "source_cohort": "child",
+      "target_cohort": "adult",
+      "source_threshold": 7,
+      "target_threshold": 7,
+      "threshold_mismatch": false,
+      "accuracy": 0.9474,
+      "balanced_accuracy": 0.9557,
+      "roc_auc": 0.9913,
+      "notes": "Matching threshold t=7."
+    },
+    {
+      "source_cohort": "child",
+      "target_cohort": "adolescent",
+      "source_threshold": 7,
+      "target_threshold": 7,
+      "threshold_mismatch": false,
+      "accuracy": 0.9423,
+      "balanced_accuracy": 0.9311,
+      "roc_auc": 0.9892,
+      "notes": "Matching threshold t=7."
+    },
+    {
+      "source_cohort": "child",
+      "target_cohort": "toddler",
+      "source_threshold": 7,
+      "target_threshold": 4,
+      "threshold_mismatch": true,
+      "accuracy": 0.6973,
+      "balanced_accuracy": 0.7809,
+      "roc_auc": 0.9912,
+      "notes": "Source uses t=7, Target uses t=4."
+    },
+    {
+      "source_cohort": "toddler",
+      "target_cohort": "adult",
+      "source_threshold": 4,
+      "target_threshold": 7,
+      "threshold_mismatch": true,
+      "accuracy": 0.6094,
+      "balanced_accuracy": 0.733,
+      "roc_auc": 0.9941,
+      "notes": "Source uses t=4, Target uses t=7."
+    },
+    {
+      "source_cohort": "toddler",
+      "target_cohort": "adolescent",
+      "source_threshold": 4,
+      "target_threshold": 7,
+      "threshold_mismatch": true,
+      "accuracy": 0.7019,
+      "balanced_accuracy": 0.622,
+      "roc_auc": 0.9861,
+      "notes": "Source uses t=4, Target uses t=7."
+    },
+    {
+      "source_cohort": "toddler",
+      "target_cohort": "child",
+      "source_threshold": 4,
+      "target_threshold": 7,
+      "threshold_mismatch": true,
+      "accuracy": 0.6096,
+      "balanced_accuracy": 0.6225,
+      "roc_auc": 0.9814,
+      "notes": "Source uses t=4, Target uses t=7."
+    }
+  ],
+  "subgroup_analysis": {
+    "by_sex": {
+      "f": {
+        "n": 337,
+        "accuracy": {
+          "mean": 0.591,
+          "ci_95": [
+            0.5864,
+            0.5957
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.502,
+          "ci_95": [
+            0.4953,
+            0.5088
+          ]
+        }
+      },
+      "m": {
+        "n": 367,
+        "accuracy": {
+          "mean": 0.652,
+          "ci_95": [
+            0.6483,
+            0.6557
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.502,
+          "ci_95": [
+            0.4946,
+            0.5093
+          ]
+        }
+      }
+    },
+    "by_ethnicity": {
+      "White-European": {
+        "n": 233,
+        "accuracy": {
+          "mean": 0.5026,
+          "ci_95": [
+            0.4955,
+            0.5097
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.5071,
+          "ci_95": [
+            0.4996,
+            0.5145
+          ]
+        }
+      },
+      "?": {
+        "n": 95,
+        "accuracy": {
+          "mean": 0.8191,
+          "ci_95": [
+            0.8134,
+            0.8247
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.5074,
+          "ci_95": [
+            0.4871,
+            0.5278
+          ]
+        }
+      },
+      "Others": {
+        "n": 30,
+        "accuracy": {
+          "mean": 0.615,
+          "ci_95": [
+            0.599,
+            0.631
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.5247,
+          "ci_95": [
+            0.502,
+            0.5474
+          ]
+        }
+      },
+      "Black": {
+        "n": 43,
+        "accuracy": {
+          "mean": 0.5395,
+          "ci_95": [
+            0.5245,
+            0.5545
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.5064,
+          "ci_95": [
+            0.4877,
+            0.5252
+          ]
+        }
+      },
+      "Asian": {
+        "n": 123,
+        "accuracy": {
+          "mean": 0.7835,
+          "ci_95": [
+            0.7784,
+            0.7886
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.4833,
+          "ci_95": [
+            0.4654,
+            0.5013
+          ]
+        }
+      },
+      "Middle Eastern ": {
+        "n": 92,
+        "accuracy": {
+          "mean": 0.8605,
+          "ci_95": [
+            0.8555,
+            0.8655
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.4969,
+          "ci_95": [
+            0.4791,
+            0.5147
+          ]
+        }
+      },
+      "South Asian": {
+        "n": 36,
+        "accuracy": {
+          "mean": 0.8186,
+          "ci_95": [
+            0.808,
+            0.8292
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.5178,
+          "ci_95": [
+            0.4817,
+            0.554
+          ]
+        }
+      }
+    }
+  }
+}

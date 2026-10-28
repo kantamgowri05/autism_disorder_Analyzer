@@ -1,0 +1,230 @@
+{
+  "module": "Adaptive Bayesian Information-Gain Questionnaire Screener",
+  "stopping_criteria": "Stop when P(sum >= t | observed) >= 1 - delta OR <= delta, or when deterministic ceiling/floor reached",
+  "evaluations": {
+    "adult": {
+      "cutoff_threshold": 7,
+      "n_samples": 704,
+      "confidence_threshold_sweep": [
+        {
+          "delta": 0.01,
+          "confidence_target": "99% certainty",
+          "accuracy": 1.0,
+          "mean_questions_asked": 6.26,
+          "median_questions_asked": 6.0,
+          "min_questions": 4,
+          "max_questions": 10,
+          "question_reduction_pct": 37.39
+        },
+        {
+          "delta": 0.05,
+          "confidence_target": "95% certainty",
+          "accuracy": 0.9787,
+          "mean_questions_asked": 4.62,
+          "median_questions_asked": 4.0,
+          "min_questions": 2,
+          "max_questions": 10,
+          "question_reduction_pct": 53.82
+        },
+        {
+          "delta": 0.1,
+          "confidence_target": "90% certainty",
+          "accuracy": 0.9006,
+          "mean_questions_asked": 2.85,
+          "median_questions_asked": 1.0,
+          "min_questions": 1,
+          "max_questions": 10,
+          "question_reduction_pct": 71.48
+        },
+        {
+          "delta": 0.15,
+          "confidence_target": "85% certainty",
+          "accuracy": 0.7315,
+          "mean_questions_asked": 0.0,
+          "median_questions_asked": 0.0,
+          "min_questions": 0,
+          "max_questions": 0,
+          "question_reduction_pct": 100.0
+        },
+        {
+          "delta": 0.2,
+          "confidence_target": "80% certainty",
+          "accuracy": 0.7315,
+          "mean_questions_asked": 0.0,
+          "median_questions_asked": 0.0,
+          "min_questions": 0,
+          "max_questions": 0,
+          "question_reduction_pct": 100.0
+        }
+      ]
+    },
+    "child": {
+      "cutoff_threshold": 7,
+      "n_samples": 292,
+      "confidence_threshold_sweep": [
+        {
+          "delta": 0.01,
+          "confidence_target": "99% certainty",
+          "accuracy": 1.0,
+          "mean_questions_asked": 7.28,
+          "median_questions_asked": 8.0,
+          "min_questions": 4,
+          "max_questions": 10,
+          "question_reduction_pct": 27.16
+        },
+        {
+          "delta": 0.05,
+          "confidence_target": "95% certainty",
+          "accuracy": 0.9966,
+          "mean_questions_asked": 6.86,
+          "median_questions_asked": 7.0,
+          "min_questions": 4,
+          "max_questions": 10,
+          "question_reduction_pct": 31.4
+        },
+        {
+          "delta": 0.1,
+          "confidence_target": "90% certainty",
+          "accuracy": 0.9795,
+          "mean_questions_asked": 6.14,
+          "median_questions_asked": 6.0,
+          "min_questions": 3,
+          "max_questions": 10,
+          "question_reduction_pct": 38.56
+        },
+        {
+          "delta": 0.15,
+          "confidence_target": "85% certainty",
+          "accuracy": 0.9521,
+          "mean_questions_asked": 5.52,
+          "median_questions_asked": 5.0,
+          "min_questions": 3,
+          "max_questions": 10,
+          "question_reduction_pct": 44.83
+        },
+        {
+          "delta": 0.2,
+          "confidence_target": "80% certainty",
+          "accuracy": 0.8664,
+          "mean_questions_asked": 4.04,
+          "median_questions_asked": 4.0,
+          "min_questions": 2,
+          "max_questions": 10,
+          "question_reduction_pct": 59.55
+        }
+      ]
+    },
+    "adolescent": {
+      "cutoff_threshold": 7,
+      "n_samples": 104,
+      "confidence_threshold_sweep": [
+        {
+          "delta": 0.01,
+          "confidence_target": "99% certainty",
+          "accuracy": 1.0,
+          "mean_questions_asked": 7.59,
+          "median_questions_asked": 8.0,
+          "min_questions": 4,
+          "max_questions": 10,
+          "question_reduction_pct": 24.13
+        },
+        {
+          "delta": 0.05,
+          "confidence_target": "95% certainty",
+          "accuracy": 0.9904,
+          "mean_questions_asked": 6.82,
+          "median_questions_asked": 6.5,
+          "min_questions": 4,
+          "max_questions": 10,
+          "question_reduction_pct": 31.83
+        },
+        {
+          "delta": 0.1,
+          "confidence_target": "90% certainty",
+          "accuracy": 0.9808,
+          "mean_questions_asked": 6.37,
+          "median_questions_asked": 6.0,
+          "min_questions": 3,
+          "max_questions": 10,
+          "question_reduction_pct": 36.35
+        },
+        {
+          "delta": 0.15,
+          "confidence_target": "85% certainty",
+          "accuracy": 0.9615,
+          "mean_questions_asked": 5.51,
+          "median_questions_asked": 5.0,
+          "min_questions": 3,
+          "max_questions": 10,
+          "question_reduction_pct": 44.9
+        },
+        {
+          "delta": 0.2,
+          "confidence_target": "80% certainty",
+          "accuracy": 0.9231,
+          "mean_questions_asked": 4.45,
+          "median_questions_asked": 4.0,
+          "min_questions": 2,
+          "max_questions": 10,
+          "question_reduction_pct": 55.48
+        }
+      ]
+    },
+    "toddler": {
+      "cutoff_threshold": 4,
+      "n_samples": 1054,
+      "confidence_threshold_sweep": [
+        {
+          "delta": 0.01,
+          "confidence_target": "99% certainty",
+          "accuracy": 0.9953,
+          "mean_questions_asked": 6.08,
+          "median_questions_asked": 6.0,
+          "min_questions": 3,
+          "max_questions": 10,
+          "question_reduction_pct": 39.2
+        },
+        {
+          "delta": 0.05,
+          "confidence_target": "95% certainty",
+          "accuracy": 0.9507,
+          "mean_questions_asked": 4.74,
+          "median_questions_asked": 4.0,
+          "min_questions": 2,
+          "max_questions": 10,
+          "question_reduction_pct": 52.62
+        },
+        {
+          "delta": 0.1,
+          "confidence_target": "90% certainty",
+          "accuracy": 0.8416,
+          "mean_questions_asked": 2.88,
+          "median_questions_asked": 1.0,
+          "min_questions": 1,
+          "max_questions": 10,
+          "question_reduction_pct": 71.23
+        },
+        {
+          "delta": 0.15,
+          "confidence_target": "85% certainty",
+          "accuracy": 0.6907,
+          "mean_questions_asked": 0.0,
+          "median_questions_asked": 0.0,
+          "min_questions": 0,
+          "max_questions": 0,
+          "question_reduction_pct": 100.0
+        },
+        {
+          "delta": 0.2,
+          "confidence_target": "80% certainty",
+          "accuracy": 0.6907,
+          "mean_questions_asked": 0.0,
+          "median_questions_asked": 0.0,
+          "min_questions": 0,
+          "max_questions": 0,
+          "question_reduction_pct": 100.0
+        }
+      ]
+    }
+  }
+}

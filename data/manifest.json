@@ -1,0 +1,130 @@
+[
+  {
+    "name": "UCI 426 Adult ASD Screening",
+    "source_url": "https://archive.ics.uci.edu/dataset/426/autism+screening+adult",
+    "date_downloaded": "2026-10-12",
+    "file_list": [
+      "uci_426_adult.csv"
+    ],
+    "rows_x_columns": "704 x 21",
+    "label_column": "class",
+    "class_balance": {
+      "NO": 515,
+      "YES": 189
+    },
+    "license_note": "CC BY 4.0",
+    "deterministic_flag": false,
+    "status": "ok"
+  },
+  {
+    "name": "UCI 419 Children ASD Screening",
+    "source_url": "https://archive.ics.uci.edu/dataset/419/autistic+spectrum+disorder+screening+data+for+children",
+    "date_downloaded": "2026-10-12",
+    "file_list": [
+      "uci_419_children.csv"
+    ],
+    "rows_x_columns": "292 x 21",
+    "label_column": "class",
+    "class_balance": {
+      "NO": 151,
+      "YES": 141
+    },
+    "license_note": "CC BY 4.0",
+    "deterministic_flag": false,
+    "status": "ok"
+  },
+  {
+    "name": "UCI 420 Adolescent ASD Screening",
+    "source_url": "https://archive.ics.uci.edu/dataset/420/autistic+spectrum+disorder+screening+data+for+adolescent",
+    "date_downloaded": "2026-10-12",
+    "file_list": [
+      "Autism-Adolescent-Data.csv"
+    ],
+    "rows_x_columns": "104 x 21",
+    "label_column": "Class/ASD",
+    "class_balance": {
+      "YES": 63,
+      "NO": 41
+    },
+    "license_note": "CC BY 4.0",
+    "deterministic_flag": false,
+    "status": "ok"
+  },
+  {
+    "name": "Kaggle Toddler ASD Screening",
+    "source_url": "https://www.kaggle.com/datasets/fabdelja/autism-screening-for-toddlers",
+    "date_downloaded": "2026-10-12",
+    "file_list": [
+      "Toddler Autism dataset July 2018.csv"
+    ],
+    "rows_x_columns": "1054 x 19",
+    "label_column": "Class/ASD Traits ",
+    "class_balance": {
+      "Yes": 728,
+      "No": 326
+    },
+    "license_note": "Open Database License (ODbL)",
+    "deterministic_flag": true,
+    "status": "ok"
+  },
+  {
+    "name": "Autism Children Facial Images",
+    "source_url": "https://www.kaggle.com/datasets/aditya13apr/autism-children-image-dataset",
+    "date_downloaded": "2026-10-12",
+    "file_list": [
+      "train/autistic (1327 images)",
+      "train/non_autistic (1327 images)",
+      "valid/autistic (40 images)",
+      "valid/non_autistic (40 images)",
+      "test/autistic (140 images)",
+      "test/non_autistic (140 images)"
+    ],
+    "rows_x_columns": "3014 images",
+    "label_column": "class (autistic / non_autistic)",
+    "class_balance": {
+      "autistic": 1507,
+      "non_autistic": 1507
+    },
+    "license_note": "CC0: Public Domain",
+    "status": "ok"
+  },
+  {
+    "name": "Eye-Tracking Autism Dataset",
+    "source_url": "https://www.kaggle.com/datasets/imtkaggleteam/eye-tracking-autism",
+    "date_downloaded": "2026-10-12",
+    "file_list": [
+      "Metadata_Participants.csv"
+    ],
+    "rows_x_columns": "59 x 5",
+    "label_column": "Class",
+    "class_balance": {
+      "TD": 30,
+      "ASD": 29
+    },
+    "license_note": "CC BY-SA 4.0",
+    "deterministic_flag": false,
+    "status": "ok"
+  },
+  {
+    "name": "Saliency4ASD Zenodo Benchmark",
+    "source_url": "https://zenodo.org/records/2647418",
+    "date_downloaded": null,
+    "file_list": [],
+    "rows_x_columns": null,
+    "label_column": "Scanpath / Fixation saliency",
+    "class_balance": null,
+    "license_note": "Creative Commons Attribution 4.0",
+    "status": "manual"
+  },
+  {
+    "name": "ADHD-200 Phenotypic / FreeSurfer",
+    "source_url": "https://www.nitrc.org/frs/?group_id=383",
+    "date_downloaded": null,
+    "file_list": [],
+    "rows_x_columns": null,
+    "label_column": "DX (ADHD diagnosis)",
+    "class_balance": null,
+    "license_note": "NITRC Data Use Agreement",
+    "status": "manual"
+  }
+]

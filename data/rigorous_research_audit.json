@@ -1,0 +1,117 @@
+{
+  "image_duplicate_audit": {
+    "train_count": 2651,
+    "valid_count": 80,
+    "test_count": 280,
+    "train_test_leakage_duplicates": 0,
+    "train_valid_leakage_duplicates": 0,
+    "valid_test_leakage_duplicates": 56
+  },
+  "combined_dataset_duplicates": 847,
+  "demographics_only_experiment": {
+    "toddler": {
+      "accuracy": 0.7068,
+      "roc_auc": 0.6423,
+      "f1": 0.8189
+    },
+    "children": {
+      "accuracy": 0.5509,
+      "roc_auc": 0.5795,
+      "f1": 0.4691
+    },
+    "adolescent": {
+      "accuracy": 0.6157,
+      "roc_auc": 0.5626,
+      "f1": 0.7151
+    },
+    "adult": {
+      "accuracy": 0.733,
+      "roc_auc": 0.6601,
+      "f1": 0.1243
+    }
+  },
+  "reduced_items_experiment": {
+    "toddler": {
+      "top3_items": [
+        "A7",
+        "A9",
+        "A5"
+      ],
+      "top3_acc": 0.8529,
+      "top3_auc": 0.935,
+      "top5_items": [
+        "A7",
+        "A9",
+        "A5",
+        "A6",
+        "A1"
+      ],
+      "top5_acc": 0.9022,
+      "top5_auc": 0.9673
+    },
+    "children": {
+      "top3_items": [
+        "A4_Score",
+        "A9_Score",
+        "A8_Score"
+      ],
+      "top3_acc": 0.846,
+      "top3_auc": 0.8798,
+      "top5_items": [
+        "A4_Score",
+        "A9_Score",
+        "A8_Score",
+        "A10_Score",
+        "A1_Score"
+      ],
+      "top5_acc": 0.8597,
+      "top5_auc": 0.9549
+    },
+    "adolescent": {
+      "top3_items": [
+        "A5_Score",
+        "A10_Score",
+        "A4_Score"
+      ],
+      "top3_acc": 0.8652,
+      "top3_auc": 0.891,
+      "top5_items": [
+        "A5_Score",
+        "A10_Score",
+        "A4_Score",
+        "A3_Score",
+        "A6_Score"
+      ],
+      "top5_acc": 0.9033,
+      "top5_auc": 0.9674
+    },
+    "adult": {
+      "top3_items": [
+        "A9_Score",
+        "A6_Score",
+        "A5_Score"
+      ],
+      "top3_acc": 0.8821,
+      "top3_auc": 0.9423,
+      "top5_items": [
+        "A9_Score",
+        "A6_Score",
+        "A5_Score",
+        "A4_Score",
+        "A3_Score"
+      ],
+      "top5_acc": 0.9076,
+      "top5_auc": 0.968
+    }
+  },
+  "cross_cohort_transfer_experiment": {
+    "adult_to_adolescent": {
+      "accuracy": 0.9231,
+      "auc": 0.9822
+    },
+    "adult_to_child": {
+      "accuracy": 0.9384,
+      "auc": 0.9891
+    }
+  }
+}

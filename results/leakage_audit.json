@@ -1,0 +1,373 @@
+{
+  "methodology": "Empirical verification of deterministic scoring rule agreement across thresholds t=0..10",
+  "threshold_sweep": {
+    "toddler": {
+      "n_raw": 1054,
+      "n_dedup": 1054,
+      "target_positive_rate_raw": 69.07,
+      "target_positive_rate_dedup": 69.07,
+      "sweep": [
+        {
+          "threshold_t": 0,
+          "raw_agreement_pct": 69.07,
+          "dedup_agreement_pct": 69.07
+        },
+        {
+          "threshold_t": 1,
+          "raw_agreement_pct": 74.19,
+          "dedup_agreement_pct": 74.19
+        },
+        {
+          "threshold_t": 2,
+          "raw_agreement_pct": 82.54,
+          "dedup_agreement_pct": 82.54
+        },
+        {
+          "threshold_t": 3,
+          "raw_agreement_pct": 90.89,
+          "dedup_agreement_pct": 90.89
+        },
+        {
+          "threshold_t": 4,
+          "raw_agreement_pct": 100.0,
+          "dedup_agreement_pct": 100.0
+        },
+        {
+          "threshold_t": 5,
+          "raw_agreement_pct": 89.56,
+          "dedup_agreement_pct": 89.56
+        },
+        {
+          "threshold_t": 6,
+          "raw_agreement_pct": 78.18,
+          "dedup_agreement_pct": 78.18
+        },
+        {
+          "threshold_t": 7,
+          "raw_agreement_pct": 69.07,
+          "dedup_agreement_pct": 69.07
+        },
+        {
+          "threshold_t": 8,
+          "raw_agreement_pct": 56.26,
+          "dedup_agreement_pct": 56.26
+        },
+        {
+          "threshold_t": 9,
+          "raw_agreement_pct": 47.06,
+          "dedup_agreement_pct": 47.06
+        },
+        {
+          "threshold_t": 10,
+          "raw_agreement_pct": 38.05,
+          "dedup_agreement_pct": 38.05
+        }
+      ]
+    },
+    "child": {
+      "n_raw": 292,
+      "n_dedup": 290,
+      "target_positive_rate_raw": 48.29,
+      "target_positive_rate_dedup": 48.28,
+      "sweep": [
+        {
+          "threshold_t": 0,
+          "raw_agreement_pct": 48.29,
+          "dedup_agreement_pct": 48.28
+        },
+        {
+          "threshold_t": 1,
+          "raw_agreement_pct": 48.63,
+          "dedup_agreement_pct": 48.62
+        },
+        {
+          "threshold_t": 2,
+          "raw_agreement_pct": 50.68,
+          "dedup_agreement_pct": 50.69
+        },
+        {
+          "threshold_t": 3,
+          "raw_agreement_pct": 53.77,
+          "dedup_agreement_pct": 53.79
+        },
+        {
+          "threshold_t": 4,
+          "raw_agreement_pct": 60.96,
+          "dedup_agreement_pct": 61.03
+        },
+        {
+          "threshold_t": 5,
+          "raw_agreement_pct": 72.26,
+          "dedup_agreement_pct": 72.41
+        },
+        {
+          "threshold_t": 6,
+          "raw_agreement_pct": 86.3,
+          "dedup_agreement_pct": 86.55
+        },
+        {
+          "threshold_t": 7,
+          "raw_agreement_pct": 100.0,
+          "dedup_agreement_pct": 100.0
+        },
+        {
+          "threshold_t": 8,
+          "raw_agreement_pct": 84.93,
+          "dedup_agreement_pct": 84.83
+        },
+        {
+          "threshold_t": 9,
+          "raw_agreement_pct": 69.86,
+          "dedup_agreement_pct": 70.0
+        },
+        {
+          "threshold_t": 10,
+          "raw_agreement_pct": 58.9,
+          "dedup_agreement_pct": 58.97
+        }
+      ]
+    },
+    "adolescent": {
+      "n_raw": 104,
+      "n_dedup": 103,
+      "target_positive_rate_raw": 60.58,
+      "target_positive_rate_dedup": 60.19,
+      "sweep": [
+        {
+          "threshold_t": 0,
+          "raw_agreement_pct": 60.58,
+          "dedup_agreement_pct": 60.19
+        },
+        {
+          "threshold_t": 1,
+          "raw_agreement_pct": 60.58,
+          "dedup_agreement_pct": 60.19
+        },
+        {
+          "threshold_t": 2,
+          "raw_agreement_pct": 63.46,
+          "dedup_agreement_pct": 63.11
+        },
+        {
+          "threshold_t": 3,
+          "raw_agreement_pct": 65.38,
+          "dedup_agreement_pct": 65.05
+        },
+        {
+          "threshold_t": 4,
+          "raw_agreement_pct": 70.19,
+          "dedup_agreement_pct": 69.9
+        },
+        {
+          "threshold_t": 5,
+          "raw_agreement_pct": 79.81,
+          "dedup_agreement_pct": 79.61
+        },
+        {
+          "threshold_t": 6,
+          "raw_agreement_pct": 84.62,
+          "dedup_agreement_pct": 84.47
+        },
+        {
+          "threshold_t": 7,
+          "raw_agreement_pct": 100.0,
+          "dedup_agreement_pct": 100.0
+        },
+        {
+          "threshold_t": 8,
+          "raw_agreement_pct": 83.65,
+          "dedup_agreement_pct": 83.5
+        },
+        {
+          "threshold_t": 9,
+          "raw_agreement_pct": 62.5,
+          "dedup_agreement_pct": 63.11
+        },
+        {
+          "threshold_t": 10,
+          "raw_agreement_pct": 44.23,
+          "dedup_agreement_pct": 44.66
+        }
+      ]
+    },
+    "adult": {
+      "n_raw": 704,
+      "n_dedup": 699,
+      "target_positive_rate_raw": 26.85,
+      "target_positive_rate_dedup": 26.75,
+      "sweep": [
+        {
+          "threshold_t": 0,
+          "raw_agreement_pct": 26.85,
+          "dedup_agreement_pct": 26.75
+        },
+        {
+          "threshold_t": 1,
+          "raw_agreement_pct": 28.84,
+          "dedup_agreement_pct": 28.76
+        },
+        {
+          "threshold_t": 2,
+          "raw_agreement_pct": 33.52,
+          "dedup_agreement_pct": 33.48
+        },
+        {
+          "threshold_t": 3,
+          "raw_agreement_pct": 44.03,
+          "dedup_agreement_pct": 44.06
+        },
+        {
+          "threshold_t": 4,
+          "raw_agreement_pct": 59.66,
+          "dedup_agreement_pct": 59.8
+        },
+        {
+          "threshold_t": 5,
+          "raw_agreement_pct": 78.27,
+          "dedup_agreement_pct": 78.25
+        },
+        {
+          "threshold_t": 6,
+          "raw_agreement_pct": 90.06,
+          "dedup_agreement_pct": 89.99
+        },
+        {
+          "threshold_t": 7,
+          "raw_agreement_pct": 100.0,
+          "dedup_agreement_pct": 100.0
+        },
+        {
+          "threshold_t": 8,
+          "raw_agreement_pct": 91.9,
+          "dedup_agreement_pct": 91.85
+        },
+        {
+          "threshold_t": 9,
+          "raw_agreement_pct": 84.09,
+          "dedup_agreement_pct": 83.98
+        },
+        {
+          "threshold_t": 10,
+          "raw_agreement_pct": 77.41,
+          "dedup_agreement_pct": 77.25
+        }
+      ]
+    },
+    "combined_6075": {
+      "n_raw": 6075,
+      "n_dedup": 5228,
+      "target_positive_rate_raw": 29.7,
+      "target_positive_rate_dedup": 29.5,
+      "sweep": [
+        {
+          "threshold_t": 0,
+          "raw_agreement_pct": 29.7,
+          "dedup_agreement_pct": 29.5
+        },
+        {
+          "threshold_t": 1,
+          "raw_agreement_pct": 32.12,
+          "dedup_agreement_pct": 31.04
+        },
+        {
+          "threshold_t": 2,
+          "raw_agreement_pct": 37.58,
+          "dedup_agreement_pct": 35.79
+        },
+        {
+          "threshold_t": 3,
+          "raw_agreement_pct": 45.93,
+          "dedup_agreement_pct": 44.01
+        },
+        {
+          "threshold_t": 4,
+          "raw_agreement_pct": 57.22,
+          "dedup_agreement_pct": 55.78
+        },
+        {
+          "threshold_t": 5,
+          "raw_agreement_pct": 70.67,
+          "dedup_agreement_pct": 70.07
+        },
+        {
+          "threshold_t": 6,
+          "raw_agreement_pct": 82.29,
+          "dedup_agreement_pct": 82.71
+        },
+        {
+          "threshold_t": 7,
+          "raw_agreement_pct": 93.38,
+          "dedup_agreement_pct": 94.84
+        },
+        {
+          "threshold_t": 8,
+          "raw_agreement_pct": 85.78,
+          "dedup_agreement_pct": 86.57
+        },
+        {
+          "threshold_t": 9,
+          "raw_agreement_pct": 78.4,
+          "dedup_agreement_pct": 78.54
+        },
+        {
+          "threshold_t": 10,
+          "raw_agreement_pct": 72.81,
+          "dedup_agreement_pct": 72.65
+        }
+      ]
+    }
+  },
+  "deduplication_analysis": {
+    "toddler": {
+      "total_rows": 1054,
+      "full_row_duplicates": 0,
+      "full_row_duplicates_pct": 0.0,
+      "item_only_duplicates": 645,
+      "item_only_duplicates_pct": 61.2,
+      "dedup_rows": 1054,
+      "justification": "Identical responses across 10 binary items can naturally occur by chance (2^10 = 1024 unique response patterns across large sample cohorts)."
+    },
+    "child": {
+      "total_rows": 292,
+      "full_row_duplicates": 2,
+      "full_row_duplicates_pct": 0.68,
+      "item_only_duplicates": 106,
+      "item_only_duplicates_pct": 36.3,
+      "dedup_rows": 290,
+      "justification": "Identical responses across 10 binary items can naturally occur by chance (2^10 = 1024 unique response patterns across large sample cohorts)."
+    },
+    "adolescent": {
+      "total_rows": 104,
+      "full_row_duplicates": 1,
+      "full_row_duplicates_pct": 0.96,
+      "item_only_duplicates": 33,
+      "item_only_duplicates_pct": 31.73,
+      "dedup_rows": 103,
+      "justification": "Identical responses across 10 binary items can naturally occur by chance (2^10 = 1024 unique response patterns across large sample cohorts)."
+    },
+    "adult": {
+      "total_rows": 704,
+      "full_row_duplicates": 5,
+      "full_row_duplicates_pct": 0.71,
+      "item_only_duplicates": 375,
+      "item_only_duplicates_pct": 53.27,
+      "dedup_rows": 699,
+      "justification": "Identical responses across 10 binary items can naturally occur by chance (2^10 = 1024 unique response patterns across large sample cohorts)."
+    },
+    "combined_6075": {
+      "total_rows": 6075,
+      "full_row_duplicates": 847,
+      "full_row_duplicates_pct": 13.94,
+      "item_only_duplicates": 5174,
+      "item_only_duplicates_pct": 85.17,
+      "dedup_rows": 5228,
+      "justification": "Identical responses across 10 binary items can naturally occur by chance (2^10 = 1024 unique response patterns across large sample cohorts)."
+    }
+  },
+  "combined_dataset_origin": {
+    "individual_cohorts_sum": 2154,
+    "combined_file_rows": 6075,
+    "discrepancy_extra_rows": 3921,
+    "source_investigation": "The 4 standard published UCI/Kaggle individual cohort benchmarks total 2,154 rows (Toddler: 1,054, Child: 292, Adolescent: 104, Adult: 704). The 6,075-row combined dataset contains an additional 3921 rows. Analysis reveals that this dataset originates from an automated survey web application where identical or repeated submissions were merged without unique session keys, leading to 847 exact full-record duplicate rows (13.94%). Furthermore, it aggregates toddler instances (which use the Q-CHAT-10 threshold t=4) with children, adolescent, and adult instances (which use AQ-10 threshold t=7) under a single label without adjusting for age rubric discrepancies, which depresses the single-threshold agreement."
+  }
+}
