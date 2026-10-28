@@ -1,27 +1,36 @@
-from iris_scale import analyze_image_iris_scale
-import base64
-import io
-from PIL import Image
 import os
 import sys
 import json
 from pathlib import Path
 from typing import Dict, Any, Optional, List
+import base64
+import io
+from PIL import Image
 import joblib
 import pandas as pd
 import numpy as np
+
+# Ensure backend directory and face-detection-tflite are in sys.path
+_CURRENT_DIR = Path(__file__).resolve().parent
+_ROOT_DIR = _CURRENT_DIR.parent
+if str(_CURRENT_DIR) not in sys.path:
+    sys.path.insert(0, str(_CURRENT_DIR))
+if str(_ROOT_DIR / "face-detection-tflite") not in sys.path:
+    sys.path.insert(0, str(_ROOT_DIR / "face-detection-tflite"))
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = _ROOT_DIR
 MODELS_DIR = BASE_DIR / "models"
 RESULTS_DIR = BASE_DIR / "results"
 DATA_DIR = BASE_DIR / "data"
 
+from iris_scale import analyze_image_iris_scale
 from conformal import ConformalPredictor
 from adaptive_screener import select_next_question, compute_posterior
 from explainer import template_explain, TabularExplainer
