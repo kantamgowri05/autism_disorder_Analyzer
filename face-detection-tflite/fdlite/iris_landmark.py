@@ -5,7 +5,23 @@ from dataclasses import dataclass
 from enum import IntEnum
 import numpy as np
 import os
-import tensorflow as tf
+try:
+    from ai_edge_litert.interpreter import Interpreter
+    class _LiteWrapper:
+        pass
+    _LiteWrapper.Interpreter = Interpreter
+    class tf:
+        lite = _LiteWrapper
+except ImportError:
+    try:
+        from tflite_runtime.interpreter import Interpreter
+        class _LiteWrapper:
+            pass
+        _LiteWrapper.Interpreter = Interpreter
+        class tf:
+            lite = _LiteWrapper
+    except ImportError:
+        import tensorflow as tf
 from PIL.Image import Image
 from typing import List, Optional, Sequence, Tuple, Union
 from fdlite import ArgumentError, MissingExifDataError, ModelDataError, exif

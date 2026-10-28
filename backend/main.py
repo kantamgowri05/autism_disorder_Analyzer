@@ -441,23 +441,6 @@ async def analyze_iris(request: Request, req: Optional[IrisTrackingRequest] = No
             # Fallback if explicit is_child_or_toddler flag set without contradictory age_group
             is_child = False  # default Unknown does NOT trigger pediatric gate
             
-    # Match against pre-calibrated genuine MediaPipe/fdlite dataset results
-    suffix = "child" if is_child else "adult"
-    if req and req.preset_id in ["case1", "case2", "case3"]:
-        key = f"{req.preset_id}_{suffix}"
-        if key in PRESET_CACHE:
-            return PRESET_CACHE[key]
-            
-    # Also match by image geometry for demonstration presets
-    if img.size == (282, 305):
-        key = f"case1_{suffix}"
-        if key in PRESET_CACHE:
-            return PRESET_CACHE[key]
-    elif img.size == (271, 346):
-        key = f"case2_{suffix}"
-        if key in PRESET_CACHE:
-            return PRESET_CACHE[key]
-
     try:
         return analyze_image_iris_scale(img, is_child_or_toddler=is_child)
     except Exception as err:

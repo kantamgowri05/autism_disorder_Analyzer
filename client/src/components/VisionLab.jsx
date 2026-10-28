@@ -137,7 +137,6 @@ export default function VisionLab({ screeningResult, isSequentialScreening, onCo
         signal: controller.signal,
         body: JSON.stringify({
           image_base64: imgSrc,
-          preset_id: selectedPreset,
           age_group: activeAge,
           is_child_or_toddler: activeAge === "Child"
         })
