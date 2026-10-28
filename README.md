@@ -1,11 +1,24 @@
 # NeuroScreen: Adaptive Clinical Triage & Explainable AI for Autism Spectrum Screening
 
-[![FastAPI](https://img.shields.io/badge/Backend-FastAPI%20%7C%20Python%203.11-009688.svg?logo=fastapi)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/Frontend-React%2019%20%7C%20Vite-61DAFB.svg?logo=react)](https://react.dev)
-[![Conformal Prediction](https://img.shields.io/badge/Uncertainty-Split--Conformal%20Calibration-orange.svg)](#conformal-prediction)
+[![Live Demo](https://img.shields.io/badge/Live%20App-Vercel%20Deployment-000000.svg?logo=vercel&logoColor=white)](https://autism-disorder-analyzer.vercel.app)
+[![API Status](https://img.shields.io/badge/Backend%20API-Render%20Live-46E3B7.svg?logo=render&logoColor=white)](https://autism-analyzer-api.onrender.com/docs)
+[![Swagger Docs](https://img.shields.io/badge/API%20Docs-Interactive%20Swagger-009688.svg?logo=fastapi&logoColor=white)](https://autism-analyzer-api.onrender.com/docs)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github&logoColor=white)](https://github.com/kantamgowri05/autism_disorder_Analyzer)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 An open-source, mathematically principled clinical decision-support pipeline for Autism Spectrum Disorder (ASD) triage. Rather than deploying black-box classifiers that force binary guesses, **NeuroScreen** combines **Adaptive Bayesian Item Selection** (reducing questionnaire length by up to 53.8%) with **Split-Conformal Risk Abstention** to guarantee patient safety and prevent false reassurance.
+
+---
+
+## 🌐 Live Production Deployments
+
+| Component | Platform | Live URL | Description |
+|---|---|---|---|
+| **Web Client (Frontend)** | **Vercel** | **[https://autism-disorder-analyzer.vercel.app](https://autism-disorder-analyzer.vercel.app)** | Interactive screening app, dynamic CMI questions & VisionLab biometrics |
+| **Backend API (Engine)** | **Render** | **[https://autism-analyzer-api.onrender.com](https://autism-analyzer-api.onrender.com)** | High-performance FastAPI prediction and calibration engine |
+| **Interactive API Docs** | **Swagger UI** | **[https://autism-analyzer-api.onrender.com/docs](https://autism-analyzer-api.onrender.com/docs)** | Test all endpoints live in the browser (`/api/screen`, `/api/explain`, `/api/iris-tracking`) |
+| **Alternative API Docs** | **ReDoc** | **[https://autism-analyzer-api.onrender.com/redoc](https://autism-analyzer-api.onrender.com/redoc)** | Clean OpenAPI specification documentation |
+| **Source Code** | **GitHub** | **[https://github.com/kantamgowri05/autism_disorder_Analyzer](https://github.com/kantamgowri05/autism_disorder_Analyzer)** | Complete open-source codebase & research artifacts |
 
 ---
 
@@ -84,25 +97,6 @@ autism_disorder_Analyzer/
 │   └── neuroscreen_ieee.pdf     # Compiled 6-page IEEE paper
 └── requirements.txt             # Root requirements for cloud deployment
 ```
-
----
-
-## 🚀 Live Deployment Guide
-
-### 1. Backend (FastAPI on Render)
-- **Runtime**: `Python 3`
-- **Build Command**: `pip install -r requirements.txt`
-- **Start Command**: `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
-- **Live URL**: `https://<your-service-name>.onrender.com`
-- **Interactive Swagger Docs**: `https://<your-service-name>.onrender.com/docs`
-
-### 2. Frontend (Vite + React on Vercel)
-- **Framework Preset**: `Vite`
-- **Root Directory**: `client`
-- **Build Command**: `npm run build`
-- **Output Directory**: `dist`
-- **Environment Variables**:
-  - `VITE_API_URL` = `https://<your-service-name>.onrender.com` (Render Backend URL)
 
 ---
 
