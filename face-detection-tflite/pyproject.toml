@@ -1,0 +1,66 @@
+[project]
+name = "face-detection-tflite"
+version = "0.6.0"
+description = "A Python port of Google MediaPipe Face Detection modules"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Patrick Levin", email = "vertical-pink@protonmail.com" }
+]
+license = { file = "LICENSE" }
+keywords = [
+    "AI", "face-detection", "tensorflow", "tflite", "face-landmarks", "iris-detection", "face-mesh"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+    "tensorflow>=2.19.0",
+    "tensorflow-metal>=1.2.0; sys_platform == 'darwin'",
+    "Pillow>=11.3.0",
+    "numpy<2.2.0,>=1.26.0" # match tensorflow-versions
+]
+
+[project.urls]
+Homepage = "https://github.com/patlevin/face-detection-tflite"
+BugTracker = "https://github.com/patlevin/face-detection-tflite/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*"]
+
+[tool.flake8]
+exclude = [
+    ".eggs",
+    ".git",
+    "__pycache__",
+    "build",
+    "dist"
+]
+
+[tool.tox]
+legacy_tox_ini = """
+    [tox]
+    requires =
+        tox>=4.19
+    env_list = py310, py311, py312
+
+    [testenv]
+    deps =
+        build
+    commands =
+        python -m build --wheel --outdir dist
+        python -c "import glob, subprocess; wheels = glob.glob('dist/*.whl'); subprocess.check_call(['pip', 'install', wheels[0]])"
+        python -c 'import fdlite; fdlite.__version__'
+"""
+

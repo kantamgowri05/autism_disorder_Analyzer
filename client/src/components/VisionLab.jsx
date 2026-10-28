@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../config.js';
 import React, { useState, useRef, useEffect } from "react";
 import { Eye, Camera, Upload, RefreshCw, CheckCircle2, AlertCircle, Sparkles, Layers, ShieldCheck, ArrowRight, Video, VideoOff, Sliders, Image as ImageIcon, RotateCcw, Scan, Crosshair, Check, Activity, Target, Zap, MousePointer, Copy, Play, CheckCheck, Clock, Award, Trophy, Compass, CircleDot, PlayCircle, Cpu, X, HelpCircle, Ruler } from "lucide-react";
 import JellyRadio from "./JellyRadio";
@@ -130,7 +131,7 @@ export default function VisionLab({ screeningResult, isSequentialScreening, onCo
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 20000);
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/iris-tracking", {
+      const res = await fetch(`http://127.0.0.1:8000/api/iris-tracking`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         signal: controller.signal,
@@ -162,7 +163,7 @@ export default function VisionLab({ screeningResult, isSequentialScreening, onCo
       const isTimeout = err.name === "AbortError";
       const msg = isTimeout 
         ? "Analysis timed out after 20 seconds. Please click Re-scan Biometrics to try again."
-        : `Backend connection failed: ${err.message}. Ensure backend is running at http://127.0.0.1:8000.`;
+        : `Backend connection failed: ${err.message}. Ensure backend is running at .`;
       setApiError(msg);
       setBiometricsResult(null);
     } finally {

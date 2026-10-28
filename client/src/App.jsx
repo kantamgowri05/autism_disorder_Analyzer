@@ -1,3 +1,4 @@
+import { API_BASE_URL } from './config.js';
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -112,7 +113,7 @@ export default function App() {
     }
     setLoading(true);
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/screen", {
+      const res = await fetch(`${API_BASE_URL}/api/screen`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -127,7 +128,7 @@ export default function App() {
         setScreeningResult(data);
         setCurrentPage("vision");
 
-        fetch("http://127.0.0.1:8000/api/explain", {
+        fetch(`${API_BASE_URL}/api/explain`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
